@@ -185,17 +185,23 @@ export function Keyboard() {
   ]
 
   return (
-    <section className='w-full flex flex-col h-full justify-around items-center'>
-      <ul className='grid grid-cols-auto-fill w-[800px] gap-2 my-0 mx-auto '>
+    <section className='w-full flex flex-col h-full justify-around items-center py-10  max-xl:gap-5 gap-10'>
+      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
         {KEYS.map(key => (
-          <li>
+          <li
+            key={key.label}
+            className='w-[100px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+          >
             <Key letter={key.value} handleKeyboard={addLetter} />
           </li>
         ))}
       </ul>
-      <ul className='grid grid-cols-auto-fill w-[800px] gap-2 my-0 mx-auto'>
+      <ul className='flex w-full justify-center px-20 gap-2 '>
         {ACTIONS_KEYS.map(key => (
-          <li>
+          <li
+            key={key.label}
+            className='w-[150px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+          >
             <Key letter={key.label} handleKeyboard={key.action} />
           </li>
         ))}
