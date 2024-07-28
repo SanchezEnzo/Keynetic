@@ -1,5 +1,7 @@
+import { LayoutApp } from './pages/Layout'
+
 function App() {
-  return <div>Hola</div>
+  return <LayoutApp />
 }
 
 export default App
