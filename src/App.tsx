@@ -1,7 +1,7 @@
-import { LayoutApp } from './pages/Layout'
+import { routes } from './routes/routes'
 
 function App() {
-  return <LayoutApp />
+  return routes
 }
 
 export default App
