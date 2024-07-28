@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
-import { useKeyboard } from '../../hooks/useKeyboard'
-import { ClearIcon, DeleteIcon, SpaceIcon } from '../Icons'
-import { Textarea } from '../Output/Textarea'
+import { useKeyboard } from '../hooks/useKeyboard'
+import { ClearIcon, DeleteIcon, SpaceIcon } from '../../layout/components/Icons'
+import { Textarea } from './Textarea'
 import { Key } from './Key'
 
 const KEYS = [

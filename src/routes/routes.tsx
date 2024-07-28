@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
-import { LayoutApp } from '../pages/Layout'
-import { Keyboard } from '../components/keyboard/Keyboard'
-import { Search } from '../components/Input/Search'
+import { LayoutApp } from '../layout/pages/Layout'
+import { Keyboard } from '../keyboard/components/Keyboard'
+import { Search } from '../search/components/Search'
 
 export const routes = (
   <Routes>
