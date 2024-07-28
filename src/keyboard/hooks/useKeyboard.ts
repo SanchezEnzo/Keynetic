@@ -1,16 +1,21 @@
-import { useState } from 'react'
+import { useReducer } from 'react'
+import {
+  initialValueKeyboardReducer,
+  keyboardReducer
+} from '../reducers/keyboardReducer'
 
 export function useKeyboard() {
-  const [sentence, setSentence] = useState('')
+  const [state, dispatch] = useReducer(
+    keyboardReducer,
+    initialValueKeyboardReducer
+  )
 
-  const addLetter = (letter?: string) => {
-    setSentence((prev: string) => prev + letter)
-  }
+  const addLetter = (letter?: string) =>
+    dispatch({ type: 'ADD_LETTER', payload: letter })
 
-  const deleteLetter = () => setSentence(prev => prev.slice(0, prev.length - 1))
-  const addSpace = () => setSentence((prev: string) => prev + ' ')
-  const clearSentence = () => setSentence('')
-  console.log(sentence)
+  const deleteLetter = () => dispatch({ type: 'DELETE_LETTER' })
+  const addSpace = () => dispatch({ type: 'ADD_SPACE' })
+  const clearSentence = () => dispatch({ type: 'CLEAR_SENTENCE' })
 
-  return { sentence, addLetter, deleteLetter, addSpace, clearSentence }
+  return { sentence: state, addLetter, deleteLetter, addSpace, clearSentence }
 }

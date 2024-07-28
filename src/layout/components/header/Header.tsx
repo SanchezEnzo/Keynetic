@@ -20,7 +20,7 @@ export function Header() {
           to='/audio'
           className='p-5 font-semibold rounded-md outline outline-[#f1f1f1] outline-[0.1px]'
         >
-          Audio
+          AUDIO
         </Link>
       </div>
     </header>
