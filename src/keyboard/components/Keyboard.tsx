@@ -3,149 +3,7 @@ import { useKeyboard } from '../hooks/useKeyboard'
 import { ClearIcon, DeleteIcon, SpaceIcon } from '../../layout/components/Icons'
 import { Textarea } from './Textarea'
 import { Key } from './Key'
-
-const KEYS = [
-  {
-    label: 'Schwa',
-    value: 'ə'
-  },
-  {
-    label: 'ɪ',
-    value: 'ɪ'
-  },
-  {
-    label: 'ShortE',
-    value: 'ɛ'
-  },
-  {
-    label: 'SmilingA',
-    value: 'æ'
-  },
-  {
-    label: 'CentralA',
-    value: 'ʌ'
-  },
-  {
-    label: 'ShortA',
-    value: 'ɑ'
-  },
-  {
-    label: 'ShortO',
-    value: 'ɔ'
-  },
-  {
-    label: 'ʊ',
-    value: 'ʊ'
-  },
-
-  {
-    label: 'e',
-    value: 'e'
-  },
-
-  {
-    label: 'Pe',
-    value: 'p'
-  },
-  {
-    label: 'Be',
-    value: 'b'
-  },
-  {
-    label: 'Te',
-    value: 't'
-  },
-  {
-    label: 'De',
-    value: 'd'
-  },
-  {
-    label: 'Ka',
-    value: 'k'
-  },
-  {
-    label: 'Ge',
-    value: 'g'
-  },
-  {
-    label: 'Efe',
-    value: 'f'
-  },
-  {
-    label: 'Ve',
-    value: 'v'
-  },
-  {
-    label: 'θ',
-    value: 'θ'
-  },
-  {
-    label: 'ð',
-    value: 'ð'
-  },
-  {
-    label: 's',
-    value: 's'
-  },
-  {
-    label: 'Zeta',
-    value: 'z'
-  },
-  {
-    label: 'ʃ',
-    value: 'ʃ'
-  },
-  {
-    label: 'ʒ',
-    value: 'ʒ'
-  },
-  {
-    label: 'Ache',
-    value: 'h'
-  },
-  {
-    label: 'Eme',
-    value: 'm'
-  },
-  {
-    label: 'Ene',
-    value: 'n'
-  },
-  {
-    label: 'NasalEne',
-    value: 'ŋ'
-  },
-  {
-    label: 'Ele',
-    value: 'l'
-  },
-
-  {
-    label: 'Jota',
-    value: 'j'
-  },
-  {
-    label: 'DobleVe',
-    value: 'w'
-  },
-
-  {
-    label: 'ˈ',
-    value: 'ˈ'
-  },
-  {
-    label: 'ˌ',
-    value: 'ˌ'
-  },
-  {
-    label: 'ː',
-    value: 'ː'
-  },
-  {
-    label: 'ˑ',
-    value: 'ˑ'
-  }
-]
+import { CONSONANTS, DIPTHONGS, OTHER_KEYS, VOWELS } from '../utils/consonants'
 
 export function Keyboard() {
   const { addLetter, sentence, addSpace, clearSentence, deleteLetter } =
@@ -187,7 +45,37 @@ export function Keyboard() {
   return (
     <section className='w-full flex flex-col h-full justify-around items-center py-10  max-xl:gap-5 gap-10'>
       <ul className='flex flex-wrap justify-center my-0 mx-auto w-full px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
-        {KEYS.map(key => (
+        {VOWELS.map(key => (
+          <li
+            key={key.label}
+            className='w-[100px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+          >
+            <Key letter={key.value} handleKeyboard={addLetter} />
+          </li>
+        ))}
+      </ul>
+      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
+        {DIPTHONGS.map(key => (
+          <li
+            key={key.label}
+            className='w-[100px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+          >
+            <Key letter={key.value} handleKeyboard={addLetter} />
+          </li>
+        ))}
+      </ul>
+      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
+        {CONSONANTS.map(key => (
+          <li
+            key={key.label}
+            className='w-[100px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+          >
+            <Key letter={key.value} handleKeyboard={addLetter} />
+          </li>
+        ))}
+      </ul>
+      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
+        {OTHER_KEYS.map(key => (
           <li
             key={key.label}
             className='w-[100px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'

@@ -6,7 +6,7 @@ interface KeyProps {
 export function Key({ letter, handleKeyboard }: KeyProps) {
   return (
     <button
-      className=''
+      className='w-full h-full'
       onClick={() => {
         if (typeof letter === 'string') {
           return handleKeyboard(letter)
