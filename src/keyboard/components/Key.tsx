@@ -14,7 +14,7 @@ export function Key({ letter, handleKeyboard }: KeyProps) {
         handleKeyboard()
       }}
     >
-      <span>{letter}</span>
+      <span className='font-semibold text-xl'>{letter}</span>
     </button>
   )
 }

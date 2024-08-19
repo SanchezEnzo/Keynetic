@@ -49,7 +49,7 @@ export function Keyboard() {
           {VOWELS.map(key => (
             <li
               key={key.label}
-              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm shadow-[#f1f1f1] shadow-key active:shadow-clickedKey active:translate-y-[3px]'
             >
               <Key letter={key.value} handleKeyboard={addLetter} />
             </li>
@@ -59,7 +59,7 @@ export function Keyboard() {
           {DIPTHONGS.map(key => (
             <li
               key={key.label}
-              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm shadow-[#f1f1f1] shadow-key active:shadow-clickedKey active:translate-y-[3px]'
             >
               <Key letter={key.value} handleKeyboard={addLetter} />
             </li>
@@ -70,7 +70,7 @@ export function Keyboard() {
         {CONSONANTS.map(key => (
           <li
             key={key.label}
-            className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+            className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm shadow-[#f1f1f1] shadow-key active:shadow-clickedKey active:translate-y-[3px]'
           >
             <Key letter={key.value} handleKeyboard={addLetter} />
           </li>
@@ -81,7 +81,7 @@ export function Keyboard() {
           {OTHER_KEYS.map(key => (
             <li
               key={key.label}
-              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+              className='w-[50px] h-[50px] max-sm:w-[50px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm shadow-[#f1f1f1] shadow-key active:shadow-clickedKey active:translate-y-[3px]'
             >
               <Key letter={key.value} handleKeyboard={addLetter} />
             </li>
@@ -91,7 +91,7 @@ export function Keyboard() {
           {ACTIONS_KEYS.map(key => (
             <li
               key={key.label}
-              className='w-[100px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm'
+              className='w-[100px] py-2 outline outline-[#f1f1f1] outline-[.1px] flex justify-center items-center rounded-sm shadow-[#f1f1f1] shadow-key active:shadow-clickedKey active:translate-y-[3px]'
             >
               <Key letter={key.label} handleKeyboard={key.action} />
             </li>
