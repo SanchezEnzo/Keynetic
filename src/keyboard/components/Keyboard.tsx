@@ -43,9 +43,9 @@ export function Keyboard() {
   ]
 
   return (
-    <section className='w-full flex flex-col h-full justify-around items-center py-10  max-2xl:gap-5 gap-10'>
+    <section className='w-full flex flex-col h-full justify-around items-center py-8 2xl:py-14 gap-5 2xl:gap-10'>
       <div className='flex px-20 gap-10'>
-        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[350px] max-lg:px-12 max-sm:px-2 gap-2 '>
+        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[400px] max-lg:px-12 max-sm:px-2 gap-3 '>
           {VOWELS.map(key => (
             <li
               key={key.label}
@@ -55,7 +55,7 @@ export function Keyboard() {
             </li>
           ))}
         </ul>
-        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[250px]  max-lg:px-12 max-sm:px-2 gap-2 '>
+        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[250px]  max-lg:px-12 max-sm:px-2 gap-3 '>
           {DIPTHONGS.map(key => (
             <li
               key={key.label}
@@ -66,7 +66,7 @@ export function Keyboard() {
           ))}
         </ul>
       </div>
-      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[850px] px-20 max-lg:px-12 max-sm:px-2 gap-2 '>
+      <ul className='flex flex-wrap justify-center my-0 mx-auto w-full max-w-[900px] px-20 max-lg:px-12 max-sm:px-2 gap-3 '>
         {CONSONANTS.map(key => (
           <li
             key={key.label}
@@ -77,7 +77,7 @@ export function Keyboard() {
         ))}
       </ul>
       <div className='flex gap-10'>
-        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full  max-lg:px-12 max-sm:px-2 gap-2 '>
+        <ul className='flex flex-wrap justify-center my-0 mx-auto w-full  max-lg:px-12 max-sm:px-2 gap-3 '>
           {OTHER_KEYS.map(key => (
             <li
               key={key.label}
@@ -87,7 +87,7 @@ export function Keyboard() {
             </li>
           ))}
         </ul>
-        <ul className='flex w-full justify-center  gap-2 '>
+        <ul className='flex w-full justify-center gap-3 '>
           {ACTIONS_KEYS.map(key => (
             <li
               key={key.label}
