@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom'
 import { LayoutApp } from '../layout/pages/Layout'
 import { Keyboard } from '../keyboard/components/Keyboard'
 import { Search } from '../search/components/Search'
+import { Audio } from '../audio/Audio'
 
 export const routes = (
   <Routes>
@@ -9,7 +10,7 @@ export const routes = (
       <Route index element={<Keyboard />} />
       <Route path='keyboard' element={<Keyboard />} />
       <Route path='search' element={<Search />} />
-      <Route path='audio' />
+      <Route path='audio' element={<Audio />} />
     </Route>
   </Routes>
 )

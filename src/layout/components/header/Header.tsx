@@ -10,7 +10,7 @@ export function Header() {
         >
           KEYBOARD
         </Link>
-        <Link
+        {/* <Link
           to='/search'
           className='p-5 max-sm:p-2 font-semibold rounded-md outline outline-[#f1f1f1] outline-[0.1px]'
         >
@@ -21,7 +21,7 @@ export function Header() {
           className='p-5 max-sm:p-2 font-semibold rounded-md outline outline-[#f1f1f1] outline-[0.1px]'
         >
           AUDIO
-        </Link>
+        </Link> */}
       </div>
     </header>
   )

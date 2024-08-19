@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { getFoneticTranscription } from '../../service/api/Searching'
 import { TranscriptionInterface } from '../../typescript/Interface'
-import { UnderConstructionSoon } from '../../keyboard/utils/Underconstruction'
 
 export function Search() {
   const [transcription, setTranscription] = useState('')
@@ -41,8 +40,8 @@ export function Search() {
   console.log(transcription)
 
   return (
-    <div className='flex justify-center items-center pt-10 w-full'>
-      <UnderConstructionSoon />
+    <div className='flex justify-center items-center pt-20 w-full'>
+      <span className='text-2xl font-semibold'>Comming Soon!</span>
     </div>
   )
 
