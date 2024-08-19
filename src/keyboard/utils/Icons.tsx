@@ -2,8 +2,8 @@ export function ComingSoonIcons() {
   return (
     <svg
       xmlns='http://www.w3.org/2000/svg'
-      height='400px'
-      width='400px'
+      height='300px'
+      width='300px'
       shapeRendering='geometricPrecision'
       textRendering='geometricPrecision'
       imageRendering='optimizeQuality'
