@@ -10,6 +10,14 @@ export function Output({ sentence }: { sentence: string }) {
     }
   }, [sentence])
 
+  const copyToClipboard = async () => {
+    try {
+      await navigator.clipboard.writeText(sentence)
+    } catch (error) {
+      throw new Error('Error trying to copy: ' + error)
+    }
+  }
+
   return (
     <section className='pt-3 flex justify-center gap-5'>
       <input
@@ -18,7 +26,7 @@ export function Output({ sentence }: { sentence: string }) {
         value={sentence}
         readOnly
       />
-      <button>
+      <button onClick={copyToClipboard}>
         <CopyIcon />
       </button>
     </section>
