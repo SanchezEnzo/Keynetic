@@ -22,36 +22,27 @@ export function Output({ sentence }: { sentence: string }) {
   }
 
   return (
-    <section className='pt-3 flex justify-center gap-5'>
+    <section className='pt-3 flex justify-center gap-3 items-center'>
       <input
         ref={inputRef}
-        className='text-[#f1f1f1] bg-transparent font-semibold text-3xl text-center tracking-wider outline rounded-sm py-1 px-2 outline-[#f1f1f1] outline-[0.1px]'
+        className='text-[#1f1f1f] font-semibold md:text-2xl text-xl text-center tracking-wider outline rounded-sm py-1 px-2 outline-[#1f1f1f] outline-[0.1px] max-md:w-[250px] bg-[#f1f1f1] '
         value={sentence}
         readOnly
       />
-      <div className='group cursor-pointer relative text-center '>
-        <button
-          onClick={copyToClipboard}
-          className='flex justify-center items-center w-full h-full'
-        >
-          {copy ? <CheckIcon /> : <CopyIcon />}
-        </button>
-        <div
-          className='opacity-0 bg-[#f1f1f1] text-black text-center text-xs rounded-md py-1 absolute z-10 group-hover:opacity-100 bottom-full -left-1/2  w-12 pointer-events-none font-semibold'
-          role='tooltip'
-        >
-          {copy ? 'Copied' : 'Copy'}
-          <svg
-            className='absolute text-white h-2 w-full left-0 top-full'
-            x='0px'
-            y='0px'
-            viewBox='0 0 255 255'
-            xmlSpace='preserve'
-          >
-            <polygon className='fill-current' points='0,0 127.5,127.5 255,0' />
-          </svg>
-        </div>
-      </div>
+      <button
+        onClick={copyToClipboard}
+        className='flex justify-start items-center  gap-2 outline outline-[#1f1f1f] outline-[0.1px] rounded-sm max-md:h-8 h-9 px-1 bg-orange-200 text-[#1f1f1f] font-semibold'
+      >
+        {copy ? (
+          <>
+            <CheckIcon />
+          </>
+        ) : (
+          <>
+            <CopyIcon />
+          </>
+        )}
+      </button>
     </section>
   )
 }
