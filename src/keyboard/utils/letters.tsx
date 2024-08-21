@@ -1,5 +1,3 @@
-
-
 export const OTHER_KEYS = [
   {
     label: 'ˈ',
@@ -18,8 +16,8 @@ export const OTHER_KEYS = [
     value: 'ˑ'
   },
   {
-    label: '\\',
-    value: '\\'
+    label: '/',
+    value: '/'
   }
 ]
 
@@ -62,6 +60,10 @@ export const VOWELS = [
   {
     label: 'LongI',
     value: 'iː'
+  },
+  {
+    label: 'HappyI',
+    value: 'i'
   },
   {
     label: 'ShortI',
@@ -210,6 +212,9 @@ export const CONSONANTS = [
   {
     label: 'Jota',
     value: 'j'
+  },
+  {
+    label: 'LinkingR',
+    value: 'ʳ'
   }
 ]
-
